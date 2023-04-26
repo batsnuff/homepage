@@ -21,7 +21,7 @@ Strona została napisana w języku HTML, CSS i JavaScript.
 
 ## Uruchamianie strony
 Aby uruchomić stronę, możesz odwiedzić moją stronę internetową, która jest dostępna pod adresem : https://batsnuff.github.io/homepage/
-![DEMO](.../images/Animation.gif)
+![DEMO](.../img/Animation.gif)
 
 
 ## Wkładanie zmian
