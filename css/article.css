@@ -1,0 +1,37 @@
+.article {
+  background-color: #434445;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 4px dashed #dc143c;
+  color: #0089b6;
+}
+
+.article__highlighted2 {
+  color: antiquewhite;
+  font-family: monospace;
+}
+
+.article__highlighted {
+  color: #BEBD7F;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+}
+
+.article__artists {
+  background-color: #434445;
+  padding: 16px;
+  border-radius: 10px;
+  border: 4px dashed #dc143c;
+  font-size: x-large;
+}
+
+.article__link {
+  color: #BEBD7F;
+}
+
+.article__listItem {
+  display: flexbox;
+  list-style-type: none;
+  text-align: center;
+  color: aliceblue;
+}

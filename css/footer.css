@@ -1,0 +1,26 @@
+.footer__contacts img {
+  height: 50px;
+  width: 50px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.footer__contacts a {
+  text-decoration: none;
+}
+
+.footer__contacts img:hover {
+  opacity: 0.8;
+}
+
+.footer__contacts {
+  text-align: center;
+  padding-top: 28px;
+}
+  
+.footer__copyright {
+  font-size: 8pt;
+  text-align: right;
+  padding-bottom: 10px;
+  color: grey;
+}

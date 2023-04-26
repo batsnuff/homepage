@@ -1,0 +1,23 @@
+.navigation__listItem {
+    display: flexbox;
+    list-style-type: none;
+    text-align: center;
+    color: aliceblue;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #dc143c;
+}
+
+ul#menu {
+  z-index: 8;
+  font-weight: bold;
+  display: inline;
+}
+
+ul#menu li {
+  display: inline;
+  background-color: #dbe0d0;
+  margin-left: 78px;
+}

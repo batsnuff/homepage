@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.body {
+  font-size: 13pt;
+  background-color: #efefef;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1037px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.dark {
+  background-color: #181b1b;
+  color: #eef7dd;
+}
+
+.pic {
+  margin-left: 31%;
+  height: 360px;
+  width: 360px;
+  border-bottom: 5px;
+  border-top: 5px;
+}
+
+div#nft {
+  padding-left: -2%;
+}
+
+
+
