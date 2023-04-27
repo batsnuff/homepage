@@ -2,7 +2,7 @@
 
 ![Milosz](https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg)
 
-This is a repository for my home page where I describe my interests, showcase some of my NFTs, share my top playlist of favorites lately, and demonstrate my front-end skills.
+This is a repository for my Miloverse where I describe my interests, showcase some of my NFTs, share my top playlist of favorites lately, and demonstrate my front-end skills.
 
 ## Description
 My homepage contains information about my topic. On the site you will find, among others: information about my interests, my favorite NFTs and the top 11 list of favorite songs recently.
