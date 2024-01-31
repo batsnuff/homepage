@@ -2,30 +2,30 @@
 
 ![Milosz](https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg)
 
-To jest repozytorium dla mojej strony domowej, na której opisuję moje zainteresowania, prezentuję niektóre swoje NFT, dzielę się moją top listą ulubionych utworów w ostatnim czasie, oraz demonstruję swoje umięjętności front-endowe.
+This is a repository for my Miloverse where I describe my interests, showcase some of my NFTs, share my top playlist of favorites lately, and demonstrate my front-end skills.
 
-## Opis
-Moja strona domowa zawiera informacje mój temat. Na stronie znajdziesz między innymi: informacje o moich zainteresowaniach, moje ulubione NFT oraz top listę 11 ulubionych utworów w ostatnim czasie.
+## Description
+My homepage contains information about my topic. On the site you will find, among others: information about my interests, my favorite NFTs and the top 11 list of favorite songs recently.
 
-Strona jest bardzo prosta i łatwa do przeglądania. Strona jest w pełni responsywna i dostosowuje się do rozmiaru ekranu, na którym jest przeglądana.
+The site is very simple and easy to navigate. The website is fully responsive and adapts to the size of the screen on which it is viewed.
 
-## Zawartość
-Strona domowa zawiera kilka sekcji, w tym:
-- O mnie: w tej sekcji krótko opisuję siebie i moje zainteresowania.
-- Moje NFT: w tej sekcji prezentuję niektóre z moich ulubionych NFT oraz linki do moich kolekcji.
-- Ulubione wykonawcy: w tej sekcji wymieniam kilku moich ulubionych wykonawców oraz linki do ich muzyki i stron internetowych.
-- Top lista 11 ulubionych utworów: w tej sekcji prezentuję moją top listę 11 ulubionych utworów w ostatnim czasie, wraz z linkami do ich odtwarzania na YouTube.
+## Contents
+The home page has several sections, including:
+- About Me: In this section, I briefly describe myself and my interests.
+- My NFTs: In this section I present some of my favorite NFTs and links to my collections.
+- Favorite Artists: In this section I list some of my favorite artists and links to their music and websites.
+- Top 11 favorite songs: in this section I present my top 11 favorite songs recently, along with links to play them on YouTube.
 
-## Technologie
-Strona została napisana w języku HTML, CSS i JavaScript.
+## Technologies
+The website was written in HTML, CSS and JavaScript.
 
-## Uruchamianie strony
-Aby uruchomić stronę, możesz odwiedzić moją stronę internetową, która jest dostępna pod adresem : https://batsnuff.github.io/homepage/
-![DEMO](.../img/Animation.gif)
+## Launching the page
+To launch the site, you can visit my website which is available at: [link](https://batsnuff.github.io/homepage/)
+![DEMO](../images/Animation.gif)
 
 
-## Wkładanie zmian
-Jeśli chcesz wprowadzić zmiany do mojej strony, możesz złożyć Pull Request na GitHub. Będę wdzięczny za wszelkie sugestie i uwagi.
+## Submitting changes
+If you want to make changes to my site, you can submit a Pull Request on GitHub. I will be grateful for any suggestions and comments.
 
-#### Autor
-Ta strona została stworzona przez Milosz Szczepaniak.
+#### Author
+This page was created by Milosz Szczepaniak.
