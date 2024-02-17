@@ -1,22 +1,44 @@
 {
   const welcome = () => {
-  console.log("Witam wszystkich, którzy tutaj zaglądają 😁");
+  console.log("Witam wszystkich, którzy zaglądają do terminalu 😁");
   }
 
   welcome()  
 
-  let button = document.querySelector(".js-button");
-  let body = document.querySelector(".body");
-  let themeName = document.querySelector(".themeName");
-
-  button.addEventListener("click", () => {
+//Function to toggle theme in page
+  const toggleTheme = () => {
+    let body = document.querySelector(".body");
+    let themeName = document.querySelector(".themeName");
+  
     body.classList.toggle("dark");
+  
     if (body.classList.contains("dark")) {
       themeName.innerText = "jasny";
     } else {
       themeName.innerText = "ciemny";
     }
-  });
+  };
+
+  // Add an event listener to the button
+  let button = document.querySelector(".js-button");
+  button.addEventListener("click", toggleTheme);
+
+  // Function to toggle the visibility of the photo
+  const disablePhoto = () => {
+    let photoElement = document.querySelector(".pic");
+
+    if (photoElement) {
+      photoElement.style.display = (photoElement.style.display === "none") ? "" : "none";
+    } else {
+      console.log("Nie znaleziono elementu o klasie 'pic'.");
+    }
+  };
+
+  // Add an event listener to the button
+  let toggleButton = document.getElementById("toggleButton");
+  toggleButton.addEventListener("click", disablePhoto);
+
+  
 
   (function () {
     let cpr = document.getElementById("copyright");

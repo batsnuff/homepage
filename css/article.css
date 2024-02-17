@@ -1,4 +1,5 @@
 .article {
+  display: block;
   background-color: #434445;
   padding: 16px;
   margin-bottom: 10px;
