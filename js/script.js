@@ -1,17 +1,17 @@
-{
+
   const welcome = () => {
-  console.log("Witam wszystkich, którzy zaglądają do terminalu 😁");
-  }
+    console.log("Witam wszystkich, którzy zaglądają do terminalu 😁");
+  };
 
-  welcome()  
+  welcome();
 
-//Function to toggle theme in page
+  //Function to toggle theme in page
   const toggleTheme = () => {
     let body = document.querySelector(".body");
     let themeName = document.querySelector(".themeName");
-  
+
     body.classList.toggle("dark");
-  
+
     if (body.classList.contains("dark")) {
       themeName.innerText = "jasny";
     } else {
@@ -28,7 +28,8 @@
     let photoElement = document.querySelector(".pic");
 
     if (photoElement) {
-      photoElement.style.display = (photoElement.style.display === "none") ? "" : "none";
+      photoElement.style.display =
+        photoElement.style.display === "none" ? "" : "none";
     } else {
       console.log("Nie znaleziono elementu o klasie 'pic'.");
     }
@@ -38,8 +39,6 @@
   let toggleButton = document.getElementById("toggleButton");
   toggleButton.addEventListener("click", disablePhoto);
 
-  
-
   (function () {
     let cpr = document.getElementById("copyright");
     cpr.innerHTML =
@@ -47,4 +46,4 @@
       new Date().getFullYear() +
       " BATSNUFF - All Rights Reserved.";
   })();
-}
+
