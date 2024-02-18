@@ -1,4 +1,15 @@
 {
+  // Function to initialize the page
+  const init = () => {
+    // Welcome message
+    console.log("To jest wiadomość testowa z funkcji init 🫣");
+  };
+
+  // Run the init function after the DOM has loaded
+  document.addEventListener("DOMContentLoaded", init);
+}
+
+{
   const welcome = () => {
     console.log("Witam wszystkich, którzy zaglądają do terminalu 😁");
   };
@@ -45,6 +56,7 @@
   });
 }
 {
+  // Function to set copyright information
   (function () {
     let cpr = document.getElementById("copyright");
     cpr.innerHTML =
