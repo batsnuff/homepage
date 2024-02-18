@@ -1,10 +1,11 @@
-
+{
   const welcome = () => {
     console.log("Witam wszystkich, którzy zaglądają do terminalu 😁");
   };
 
   welcome();
-
+}
+{
   //Function to toggle theme in page
   const toggleTheme = () => {
     let body = document.querySelector(".body");
@@ -12,17 +13,14 @@
 
     body.classList.toggle("dark");
 
-    if (body.classList.contains("dark")) {
-      themeName.innerText = "jasny";
-    } else {
-      themeName.innerText = "ciemny";
-    }
+    themeName.innerText = body.classList.contains("dark") ? "jasny" : "ciemny";
   };
 
   // Add an event listener to the button
   let button = document.querySelector(".js-button");
   button.addEventListener("click", toggleTheme);
-
+}
+{
   // Function to toggle the visibility of the photo
   const disablePhoto = () => {
     let photoElement = document.querySelector(".pic");
@@ -39,10 +37,14 @@
   let toggleButton = document.getElementById("toggleButton");
   toggleButton.addEventListener("click", disablePhoto);
   // Change buttonText after click
-toggleButton.addEventListener("click", function() {
-  toggleButton.innerText = toggleButton.innerText === "Przywróć avatar" ? "Ukryj avatar" : "Przywróć avatar";
-});
-
+  toggleButton.addEventListener("click", function () {
+    toggleButton.innerText =
+      toggleButton.innerText === "Przywróć avatar"
+        ? "Ukryj avatar"
+        : "Przywróć avatar";
+  });
+}
+{
   (function () {
     let cpr = document.getElementById("copyright");
     cpr.innerHTML =
@@ -50,4 +52,4 @@ toggleButton.addEventListener("click", function() {
       new Date().getFullYear() +
       " BATSNUFF - All Rights Reserved.";
   })();
-
+}
