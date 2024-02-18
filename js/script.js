@@ -38,6 +38,10 @@
   // Add an event listener to the button
   let toggleButton = document.getElementById("toggleButton");
   toggleButton.addEventListener("click", disablePhoto);
+  // Change buttonText after click
+toggleButton.addEventListener("click", function() {
+  toggleButton.innerText = toggleButton.innerText === "Przywróć avatar" ? "Ukryj avatar" : "Przywróć avatar";
+});
 
   (function () {
     let cpr = document.getElementById("copyright");
