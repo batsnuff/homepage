@@ -1,9 +1,11 @@
 .navigation__listItem {
-    display: flexbox;
-    list-style-type: none;
-    text-align: center;
-    color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  text-align: center;
+  color: aliceblue;
 }
+
 
 .navigation__link {
   text-decoration: none;
@@ -13,7 +15,6 @@
 ul#menu {
   z-index: 8;
   font-weight: bold;
-  display: inline;
 }
 
 ul#menu li {
