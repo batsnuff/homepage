@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miloverse - Test</title>
+    <style>
+        /* Podstawowe style do testowania */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0f;
+            color: #f8fafc;
+        }
+        
+        .hero-header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+        }
+        
+        .content-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-container {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #8b5cf6;
+        }
+        
+        .highlight {
+            color: #8b5cf6;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(10, 10, 15, 0.95);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        
+        .nav-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #f8fafc;
+            background: rgba(139, 92, 246, 0.2);
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .tech-item {
+            background: rgba(26, 26, 46, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            color: #cbd5e1;
+        }
+        
+        .games-list, .artists-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .game-link, .artist-link {
+            background: rgba(26, 26, 46, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .game-link:hover, .artist-link:hover {
+            color: #f8fafc;
+            border-color: #8b5cf6;
+            transform: translateY(-2px);
+        }
+        
+        .songs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(26, 26, 46, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .songs-table th,
+        .songs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        
+        .songs-table th {
+            background: rgba(26, 26, 46, 0.8);
+            color: #8b5cf6;
+            font-weight: bold;
+        }
+        
+        .songs-table a {
+            color: #8b5cf6;
+            text-decoration: none;
+        }
+        
+        .songs-table a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: rgba(26, 26, 46, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50%;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            color: #f8fafc;
+            border-color: #8b5cf6;
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .content-section {
+                padding: 2rem 1rem;
+            }
+            
+            .section-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="header-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">WELCOME IN MILOVERSE</h1>
+                    <p class="hero-subtitle">Web3 • Gaming • Music • Development</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">O mnie</a></li>
+            <li><a href="#web3" class="nav-link">Web3</a></li>
+            <li><a href="#gaming" class="nav-link">Gaming</a></li>
+            <li><a href="#music" class="nav-link">Muzyka</a></li>
+            <li><a href="#nft" class="nav-link">NFT</a></li>
+            <li><a href="#contacts" class="nav-link">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">O mnie</h2>
+                <div class="about-content">
+                    <p>Jestem <span class="highlight">Miłosz</span>, ale w Web2 jak i Web3 możecie mnie znać jako <span class="highlight">BATSNUFF</span>:</p>
+                    <p>Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista, uzależniony od samorozwoju, cichy zwolennik transhumanizmu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web3 Section -->
+        <section id="web3" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Web3 & Kryptowaluty</h2>
+                <p>Zajmuję się kryptowalutami od około 2 lat i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku <span class="highlight">fullstack developer</span>.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-item">WAX</div>
+                    <div class="tech-item">SOL</div>
+                    <div class="tech-item">Matic</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Section -->
+        <section id="gaming" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Gaming & Play2Earn</h2>
+                <p>Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności <span class="highlight">w gry typu MMORPG, wyścigowe oraz FPS.</span></p>
+                
+                <div class="games-grid">
+                    <h3>Ulubione Gry Blockchain:</h3>
+                    <div class="games-list">
+                        <a href="https://wax.kolobok.io/" target="_blank" class="game-link">Koloblok</a>
+                        <a href="https://nftpanda.space/" target="_blank" class="game-link">NFT Panda</a>
+                        <a href="https://blockchaincuties.com/" target="_blank" class="game-link">Blockchain Cuties</a>
+                        <a href="https://lostrelics.io/" target="_blank" class="game-link">Lost Relics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Muzyka & Inspiracje</h2>
+                <p>Słucham dosłownie wszystkiego, <span class="highlight">od muzyki etnicznej z każdego zakamarka świata, popularnej, rockowej, przez hardcore, nucore po muzykę klasyczną.</span></p>
+                
+                <div class="artists-grid">
+                    <h3>Obecnie na słuchawkach:</h3>
+                    <div class="artists-list">
+                        <a href="https://culture.pl/pl/tworca/maria-peszek" target="_blank" class="artist-link">Maria Peszek</a>
+                        <a href="https://www.maxrichtermusic.com/" target="_blank" class="artist-link">Max Richter</a>
+                        <a href="https://organek-sklep.pl/" target="_blank" class="artist-link">Ørganek</a>
+                        <a href="https://www.waluskraksakryzys.pl" target="_blank" class="artist-link">WaluśKraksaKryzys</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Songs Section -->
+        <section id="top-songs" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">TOP 11 SONGS</h2>
+                <table class="songs-table">
+                    <thead>
+                        <tr>
+                            <th>Utwór</th>
+                            <th>Wykonawca</th>
+                            <th>Album</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=sfYue0xuJcI" target="_blank">Ludzie Psy</a></td>
+                            <td>Maria Peszek</td>
+                            <td>Jezus Maria Peszek</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=skPjiSzR9n4" target="_blank">Buraki</a></td>
+                            <td>Kabanos</td>
+                            <td>Kiełbie we łbie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contacts">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/batsnuff/" target="_blank" class="social-link">📷</a>
+                <a href="https://twitter.com/batsnuff/" target="_blank" class="social-link">🐦</a>
+                <a href="https://www.linkedin.com/in/mi%C5%82osz-szczepaniak-1708b9178/" target="_blank" class="social-link">💼</a>
+                <a href="https://discord.com/channels/@batsnuff#3486" target="_blank" class="social-link">🎮</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2022 - 2024 BATSNUFF</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
