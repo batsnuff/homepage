@@ -8,194 +8,364 @@
     <meta property="og:description" content="Welcome in Miloverse">
     <title>Miloverse</title>
     <link rel="icon" href="images/icon.png">
-    <link href ="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/article.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link href="css/table.css" rel="stylesheet">
-    <link href="css/navigation.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
-    <script defer src="js/script.js"></script>
-  <div class="section">
-	<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4F53qvpguiVUWGPeJoCkzb?utm_source=generator&theme=0" target="_blank" width="100%" height="110" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
- </div>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/modern-style.css">
+    <script defer src="js/modern-script.js"></script>
 </head>
-<body class="body">
-    <header class="header">
-        <div class="header__buttons-container"><button class="header__button js-button">Włącz <span class="themeName">ciemny</span> motyw</button> <button class="header__button" id="toggleButton">Ukryj avatar</button></div>
-        <h1 class="header__tittle">WELCOME IN MILOVERSE</h1>
-    </header>
-    <nav class="navigation">
-        <ul id="menu">
-            <li class="navigation__listItem"><a class="navigation__link" href='#contacts'>| Moje miejsca w sieci | </a></li>
-            <li class="navigation__listItem"><a class="navigation__link" href='#nft'>| NFT | </a></li>
-            <li class="navigation__listItem"><a class="navigation__link" href='#top-lista'>| Top-Lista | </a></li>
-            <li class="navigation__listItem"><a class="navigation__link" href='#wykonawcy'>| Aktualnie Brylujący | </a></li>
-        </ul>
-    </nav>
-    <main>
-    <section>  
-     <h2 class="header__tittle"><span>W kilku słowach o mnie:</span></h2>
-     <p class="article"><q><i>Jestem <b class="article__highlighted2">Miłosz</b>, ale w Web2 jak i Web3 możecie mnie znać jako <strong class="article__highlighted2">BATSNUFF</strong>:<br>Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista,  uzależniony od samorozwoju, cichy zwolennik transhumanizmu.</i></q></p> 
-     <img class="pic" alt="Zdjęcie" draggable="true" src="https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg"> 
-     </section>
-     
-     <article class="article">
-       <h3 class="article_header">Zajmuję się kryptowalutami od około 2 lat i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku <strong class="article__highlighted">fullstack developer</strong>. Robiłem wiele rzeczy związanych z programowaniem, głównie kopiuj/wklej z pomocą YouTube lub metodą "prób i błędów". Zaczęło się to już w czasach młodzieńczych (myślę, że w wieku 11/12 lat były pierwsze próby), ale zawsze znajdywałem tysiące wymówek do rozpoczęcia studiów/kursów/nauki "na własną rękę".<br> Jakiś czas temu postanowiłem skupić się tylko na 
-        <i class="article__highlighted">WAX, SOL i Matic.</i> Głównie inwestuje w waluty i NFT, z których w dużej mierze mogę korzystać w grach, ale również w surowce. <br> Do grania w gry blockchainowe używam <a class="article__link" rel="noopener noreferrer" title="launcher do gier" href="https://solido.games/" target="_blank">Solido</a> i <a class="article__link" rel="noopener noreferrer" title="launcher do gier" href="https://launcher.elixir.app/" target="_blank">Elixir</a> , a także dużo gram w 
-        <strong class="article__highlighted">Play2Earn</strong> na telefonie. 
-        <details align='RIGHT'><summary>między innymi :</summary>
-	  <ul> 
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://wax.kolobok.io/" target="_blank">Koloblok</a></li> 
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://nftpanda.space/" target="_blank">NFT Panda</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://blockchaincuties.com/" target="_blank">Blockachain Cuties</a></li>
-	   <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://lostrelics.io/" target="_blank">Lost Relics</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://bigtime.gg/" target="_blank">Big Time</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://www.landboxhub.io/" target="_blank">Landbox</a></li>
-	   <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://www.fone.dev/#games" target="_blank">FONE Games</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://realis.network/games" target="_blank">Crypto Dragons/Crypto Cats</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://alienworlds.io/" target="_blank">Alien Worlds</a></li>
-	   <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://wemixnetwork.com/" target="_blank">Wemix Games</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://coin-birds.com/welcome" target="_blank">Coin Birds</a></li>
-       <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona gry" href="https://miniroyale.io/" target="_blank">Mini Royale: Nations</a></li>
-      </ul></details></h3>
-    </article>
-    
-    <article class="article">
-      <h3 class="article__header">Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności <em class="article__highlighted"> w gry typu MMORPG, wyścigowe oraz FPS.</em> Jednak nie tylko tego typu gry mnie interesowały - na swoim telefonie lubię grać w 
-      <em class="article__highlighted"> gry Idle</em> oraz inne gatunki, które przyciągają moją uwagę. To właśnie dzięki graniu zyskałem nie tylko rozrywkę, ale również wiele pozytywnych doświadczeń i umiejętności, takich jak <strong class="article__highlighted">strategiczne myślenie, refleks czy koordynacja ruchowa.</strong></h3> 
-    </article>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-particles"></div>
+        <div class="gradient-overlay"></div>
+    </div>
 
-    <article class="article">
-      <h3 class="article__header">Słucham dosłownie wszystkiego,<em class="article__highlighted"> od muzyki etnicznej z każdego zakamarka świata, popularnej, rockowej, przez hardcore, nucore po muzykę klasyczną.</em> Uwielbiam muzykę lat '70-'90 i polski punk z okresu komunistycznego, muzykę elektroniczną, klubową... no i na dobrą sprawę mógłbym tak wymieniać w nieskończoność.<br> Skończyłem szkołe muzyczną i z zamiłowania jestem <strong class="article__highlighted">tekściarzem oraz kompozytorem</strong> (ale wszystko trafia "do szuflady"), też <strong class="article__highlighted">śpiewam i rapuje</strong>.<br> Do muzyki "dzisiejszej" podchodze jak do produktu takiego samego jak na półce w sklepie. Szanuję włożoną w to pracę, ale moim zdaniem straciło to już dawno pierwotną potrzebe wyrażenia swojej osoby. Teraz trzeba się sprzedać 😀<br> Ostatnimi czasy najczęściej na słuchawkach/głośnikach brylują :</h3>
-
-      <ul class="article__artists", id="wykonawcy">
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona artysty" href="https://culture.pl/pl/tworca/maria-peszek" target="_blank">Maria Peszek</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona artysty" href="https://www.maxrichtermusic.com/" target="_blank">Max Richter</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://organek-sklep.pl/" target="_blank">Ørganek</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://www.waluskraksakryzys.pl" target="_blank">WaluśKraksaKryzys</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona artysty" href="https://rytmy.pl/artysci/kukon/" target="_blank">Kukon</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://www.skunkanansie.com/" target="_blank">Skunk Anansie</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://www.luxtorpeda.eu/" target="_blank">Luxtorpeda</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://jwpcrew.pl/plyty/winyl-jwpbc-tloki/" target="_blank">JWP</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona zespołu" href="https://kabanos.net/" target="_blank">Kabanos</a></li>
-        <li class="article__listItem"><a class="article__link" rel="noopener noreferrer" title="strona artysty" href="https://melakoteluk.pl/" target="_blank">Mela Koteluk</a></li>
-      </ul>
-    </article>
-
-     <section id="top-lista">
-            <caption><b>TOP 11 SONGS</b></caption>
-            <table class="table" width="100%">
-                <thead>
-                 <tr>
-                  <th scope="col">Utwór</th>
-                  <th scope="col">Wykonawca</th>
-                  <th scope="col">Album</th>
-                 </tr>
-                </thead>
-              
-                <tbody>
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=sfYue0xuJcI" target="_blank">Ludzie Psy</a></td>
-                 <td>Maria Peszek</td>
-                 <td>Jezus Maria Peszek</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=skPjiSzR9n4" target="_blank">Buraki</a></td>
-                 <td>Kabanos</td>
-                 <td>Kiełbie we łbie</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=eoqivdLlYBA" target="_blank">To, co między nami</a></td>
-                 <td>WaluśKraksaKryzys</td>
-                 <td>Atak</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=oJTZNE8RQDg" target="_blank">Szczenię</a></td>
-                 <td>Król</td>
-                 <td>Nielot</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=-hqbkY1-iLQ" target="_blank">Autystyczny</a></td>
-                 <td>Luxtorpeda</td>
-                 <td>Luxtorpeda</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=UNo2-viKfW8" target="_blank">Open Your Eyes</a></td>
-                 <td>Guano Apes</td>
-                 <td>Crossing All Over! Volume 6</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=JSFLsw6WHWw" target="_blank">Spring 2</a></td>
-                 <td>Max Richter</td>
-                 <td>Light Academia Classical</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=nlcIKh6sBtc" target="_blank">Royals</a></td>
-                 <td>Lorde</td>
-                 <td>Pure Heroine</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=7WAFLz9xT3U" target="_blank">Wataha</a></td>
-                 <td>Męskie Granie Orkiestra</td>
-                 <td>singiel promujący trasę Męskie Granie 2016</td>
-                </tr>
-              
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=cd4-VZDUzug" target="_blank">My Ugly Boy</a></td>
-                 <td>Skunk Anansie</td>
-                 <td>25Live@25</td>
-                </tr>
-
-                <tr>
-                 <td><a class="table__link" rel="noopener noreferrer" title="piosenka" href="https://www.youtube.com/watch?v=Vn8phH0k5HI" target="_blank">Jungle</a></td>
-                 <td>TASH SULTANA</td>
-                 <td>Notion EP (wersja LIVE BEDROOM RECORDING)</td>
-                </tr>
-              
-                </tbody>
-              </table><br>
-     </section>
-
-     <section id="nft">
-      <a rel="noopener noreferrer" title="NFT-Showcase" href="https://batsnuff.github.io/NFT-Showcase/" target="_blank"><h2 class="header__tittle"><span><i>a bit of</i><b> NFT SHOWCASE</b></span></h2></a>
-       <div>
-        <video class="animation" src="images/animation nft.mp4" autoplay="" playsinline="" loop="" muted="" loading="lazy"></video>
-       </div>
-     </section>
-    </main>
-    <br><hr><br>
-    <footer>    
-        <div class="footer__contacts", id="contacts">
-			    <a rel="noopener noreferrer" title="instagram" href="https://www.instagram.com/batsnuff/" target="_blank">
-	        <img src="https://img.freepik.com/darmowe-wektory/instagram-nowa-ikona_1057-2227.jpg?w=2000" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Instagram Logo - Darmowe wektory i PSD do pobrania" jsname="kn3ccd"></a>
-	        <a rel="noopener noreferrer" title="twitter" href="https://twitter.com/batsnuff/" target="_blank">
-	        <img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Twitter Logo Vector Art, Icons, and Graphics for Free Download" jsname="kn3ccd"></a>
-	        <a rel="noopener noreferrer" title="linkedin" href="https://www.linkedin.com/in/mi%C5%82osz-szczepaniak-1708b9178/" target="_blank">
-	        <img src="https://img.freepik.com/premium-wektory/ikona-linkedin_488108-5.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Linkedin Logo - Darmowe wektory i PSD do pobrania" jsname="kn3ccd"></a>
-	        <a rel="noopener noreferrer" title="last.fm" href="https://www.last.fm/pl/user/batsnuff/" target="_blank">
-	        <img src="https://seeklogo.com/images/L/last-fm-logo-0AB6C35323-seeklogo.com.gif" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Last.fm Logo PNG Vector (AI) Free Download" jsname="kn3ccd"></a>
-	        <a rel="noopener noreferrer" title="bizverse" href="https://my.bizverse.world/BATSNUFF/" target="_blank">
-	        <img src="https://d1fdloi71mui9q.cloudfront.net/Xafj7UanRUa5uBLtekex_RFldGJwrjErh21fV" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Cena, wykresy, kapitalizacja rynkowa i inne wskaźniki BIZVERSE ..." jsname="kn3ccd">	
-	        <a rel="noopener noreferrer" title="discord" href="https://discord.com/channels/@batsnuff#3486" target="_blank">
-	        <img src="https://logowik.com/content/uploads/images/discord-new-20218785.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" alt="Discord new 2021 Logo PNG vector in SVG, PDF, AI, CDR format" jsname="kn3ccd">
-		      <a rel="noopener noreferrer" title="wiadomość do mnie na telegramie" href="https://t.me/batsnuff/" target="_blank">
-	        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsChzB_ef3L5ZHyF-oYchtkorWah5wBYaLnw&amp;usqp=CAU" jsaction="VQAsE" class="r48jcc pT0Scc" alt="Telegram, logo, circle Icon in Internet 2020" jsname="JuXqh" style="max-width:1024px;" data-iml="23381.600000023842">
+    <!-- Header Section -->
+    <header class="hero-header" data-aos="fade-down">
+        <div class="header-container">
+            <div class="theme-toggle">
+                <button class="theme-btn" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">WELCOME IN</span>
+                        <span class="miloverse-text">MILOVERSE</span>
+                    </h1>
+                    <p class="hero-subtitle">Web3 • Gaming • Music • Development</p>
+                </div>
+                
+                <div class="hero-avatar" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="avatar-container">
+                        <img src="https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg" alt="BATSNUFF Avatar" class="avatar-image">
+                        <div class="avatar-glow"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div id="copyright" align="center">&copy; 2022 - 2022 BATSNUFF</div>
-        
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" data-aos="fade-up" data-aos-delay="400">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> O mnie</a></li>
+                <li><a href="#web3" class="nav-link"><i class="fas fa-cube"></i> Web3</a></li>
+                <li><a href="#gaming" class="nav-link"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                <li><a href="#music" class="nav-link"><i class="fas fa-music"></i> Muzyka</a></li>
+                <li><a href="#nft" class="nav-link"><i class="fas fa-palette"></i> NFT</a></li>
+                <li><a href="#contacts" class="nav-link"><i class="fas fa-envelope"></i> Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">O mnie</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <div class="quote-card">
+                            <blockquote>
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Jestem <span class="highlight">Miłosz</span>, ale w Web2 jak i Web3 możecie mnie znać jako <span class="highlight">BATSNUFF</span>:
+                                <br><br>
+                                Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista, uzależniony od samorozwoju, cichy zwolennik transhumanizmu.
+                                <i class="fas fa-quote-right quote-icon"></i>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web3 Section -->
+        <section id="web3" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Web3 & Kryptowaluty</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="web3-content">
+                    <div class="web3-text" data-aos="fade-right">
+                        <p>Zajmuję się kryptowalutami od około 2 lat i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku <span class="highlight">fullstack developer</span>.</p>
+                        
+                        <p>Robiłem wiele rzeczy związanych z programowaniem, głównie kopiuj/wklej z pomocą YouTube lub metodą "prób i błędów". Zaczęło się to już w czasach młodzieńczych (myślę, że w wieku 11/12 lat były pierwsze próby), ale zawsze znajdywałem tysiące wymówek do rozpoczęcia studiów/kursów/nauki "na własną rękę".</p>
+                        
+                        <p>Jakiś czas temu postanowiłem skupić się tylko na <span class="highlight">WAX, SOL i Matic.</span> Głównie inwestuje w waluty i NFT, z których w dużej mierze mogę korzystać w grach, ale również w surowce.</p>
+                        
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <i class="fas fa-coins"></i>
+                                <span>WAX</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>SOL</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Matic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Section -->
+        <section id="gaming" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Gaming & Play2Earn</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="gaming-content">
+                    <div class="gaming-text" data-aos="fade-right">
+                        <p>Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności <span class="highlight">w gry typu MMORPG, wyścigowe oraz FPS.</span></p>
+                        
+                        <p>Jednak nie tylko tego typu gry mnie interesowały - na swoim telefonie lubię grać w <span class="highlight">gry Idle</span> oraz inne gatunki, które przyciągają moją uwagę. To właśnie dzięki graniu zyskałem nie tylko rozrywkę, ale również wiele pozytywnych doświadczeń i umiejętności, takich jak <span class="highlight">strategiczne myślenie, refleks czy koordynacja ruchowa.</span></p>
+                        
+                        <div class="launchers">
+                            <h3>Używane Launchery:</h3>
+                            <div class="launcher-links">
+                                <a href="https://solido.games/" target="_blank" class="launcher-btn">
+                                    <i class="fas fa-rocket"></i>
+                                    Solido
+                                </a>
+                                <a href="https://launcher.elixir.app/" target="_blank" class="launcher-btn">
+                                    <i class="fas fa-fire"></i>
+                                    Elixir
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="games-grid">
+                            <h3>Ulubione Gry Blockchain:</h3>
+                            <div class="games-list">
+                                <a href="https://wax.kolobok.io/" target="_blank" class="game-link">Koloblok</a>
+                                <a href="https://nftpanda.space/" target="_blank" class="game-link">NFT Panda</a>
+                                <a href="https://blockchaincuties.com/" target="_blank" class="game-link">Blockchain Cuties</a>
+                                <a href="https://lostrelics.io/" target="_blank" class="game-link">Lost Relics</a>
+                                <a href="https://bigtime.gg/" target="_blank" class="game-link">Big Time</a>
+                                <a href="https://www.landboxhub.io/" target="_blank" class="game-link">Landbox</a>
+                                <a href="https://www.fone.dev/#games" target="_blank" class="game-link">FONE Games</a>
+                                <a href="https://realis.network/games" target="_blank" class="game-link">Crypto Dragons/Cats</a>
+                                <a href="https://alienworlds.io/" target="_blank" class="game-link">Alien Worlds</a>
+                                <a href="https://wemixnetwork.com/" target="_blank" class="game-link">Wemix Games</a>
+                                <a href="https://coin-birds.com/welcome" target="_blank" class="game-link">Coin Birds</a>
+                                <a href="https://miniroyale.io/" target="_blank" class="game-link">Mini Royale</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Muzyka & Inspiracje</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="music-content">
+                    <div class="music-text" data-aos="fade-right">
+                        <p>Słucham dosłownie wszystkiego, <span class="highlight">od muzyki etnicznej z każdego zakamarka świata, popularnej, rockowej, przez hardcore, nucore po muzykę klasyczną.</span></p>
+                        
+                        <p>Uwielbiam muzykę lat '70-'90 i polski punk z okresu komunistycznego, muzykę elektroniczną, klubową... no i na dobrą sprawę mógłbym tak wymieniać w nieskończoność.</p>
+                        
+                        <p>Skończyłem szkołę muzyczną i z zamiłowania jestem <span class="highlight">tekściarzem oraz kompozytorem</span> (ale wszystko trafia "do szuflady"), też <span class="highlight">śpiewam i rapuję</span>.</p>
+                        
+                        <div class="artists-grid">
+                            <h3>Obecnie na słuchawkach:</h3>
+                            <div class="artists-list">
+                                <a href="https://culture.pl/pl/tworca/maria-peszek" target="_blank" class="artist-link">Maria Peszek</a>
+                                <a href="https://www.maxrichtermusic.com/" target="_blank" class="artist-link">Max Richter</a>
+                                <a href="https://organek-sklep.pl/" target="_blank" class="artist-link">Ørganek</a>
+                                <a href="https://www.waluskraksakryzys.pl" target="_blank" class="artist-link">WaluśKraksaKryzys</a>
+                                <a href="https://rytmy.pl/artysci/kukon/" target="_blank" class="artist-link">Kukon</a>
+                                <a href="https://www.skunkanansie.com/" target="_blank" class="artist-link">Skunk Anansie</a>
+                                <a href="https://www.luxtorpeda.eu/" target="_blank" class="artist-link">Luxtorpeda</a>
+                                <a href="https://jwpcrew.pl/plyty/winyl-jwpbc-tloki/" target="_blank" class="artist-link">JWP</a>
+                                <a href="https://kabanos.net/" target="_blank" class="artist-link">Kabanos</a>
+                                <a href="https://melakoteluk.pl/" target="_blank" class="artist-link">Mela Koteluk</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Songs Section -->
+        <section id="top-songs" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">TOP 11 SONGS</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="songs-table-container" data-aos="zoom-in">
+                    <table class="songs-table">
+                        <thead>
+                            <tr>
+                                <th>Utwór</th>
+                                <th>Wykonawca</th>
+                                <th>Album</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=sfYue0xuJcI" target="_blank">Ludzie Psy</a></td>
+                                <td>Maria Peszek</td>
+                                <td>Jezus Maria Peszek</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=skPjiSzR9n4" target="_blank">Buraki</a></td>
+                                <td>Kabanos</td>
+                                <td>Kiełbie we łbie</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=eoqivdLlYBA" target="_blank">To, co między nami</a></td>
+                                <td>WaluśKraksaKryzys</td>
+                                <td>Atak</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=oJTZNE8RQDg" target="_blank">Szczenię</a></td>
+                                <td>Król</td>
+                                <td>Nielot</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=-hqbkY1-iLQ" target="_blank">Autystyczny</a></td>
+                                <td>Luxtorpeda</td>
+                                <td>Luxtorpeda</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=UNo2-viKfW8" target="_blank">Open Your Eyes</a></td>
+                                <td>Guano Apes</td>
+                                <td>Crossing All Over! Volume 6</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=JSFLsw6WHWw" target="_blank">Spring 2</a></td>
+                                <td>Max Richter</td>
+                                <td>Light Academia Classical</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=nlcIKh6sBtc" target="_blank">Royals</a></td>
+                                <td>Lorde</td>
+                                <td>Pure Heroine</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=7WAFLz9xT3U" target="_blank">Wataha</a></td>
+                                <td>Męskie Granie Orkiestra</td>
+                                <td>singiel promujący trasę Męskie Granie 2016</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=cd4-VZDUzug" target="_blank">My Ugly Boy</a></td>
+                                <td>Skunk Anansie</td>
+                                <td>25Live@25</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.youtube.com/watch?v=Vn8phH0k5HI" target="_blank">Jungle</a></td>
+                                <td>TASH SULTANA</td>
+                                <td>Notion EP (wersja LIVE BEDROOM RECORDING)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- NFT Section -->
+        <section id="nft" class="content-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <a href="https://batsnuff.github.io/NFT-Showcase/" target="_blank">
+                            <span class="gradient-text">a bit of</span> NFT SHOWCASE
+                        </a>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="nft-content" data-aos="zoom-in">
+                    <div class="nft-video-container">
+                        <video class="nft-video" src="images/animation nft.mp4" autoplay playsinline loop muted loading="lazy"></video>
+                        <div class="video-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotify Section -->
+        <section class="spotify-section" data-aos="fade-up">
+            <div class="section-container">
+                <div class="spotify-container">
+                    <iframe src="https://open.spotify.com/embed/playlist/4F53qvpguiVUWGPeJoCkzb?utm_source=generator&theme=0" 
+                            width="100%" height="152" frameBorder="0" 
+                            allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contacts" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/batsnuff/" target="_blank" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/batsnuff/" target="_blank" class="social-link" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mi%C5%82osz-szczepaniak-1708b9178/" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://last.fm/pl/user/batsnuff/" target="_blank" class="social-link" title="Last.fm">
+                    <i class="fas fa-music"></i>
+                </a>
+                <a href="https://my.bizverse.world/BATSNUFF/" target="_blank" class="social-link" title="Bizverse">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://discord.com/channels/@batsnuff#3486" target="_blank" class="social-link" title="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://t.me/batsnuff/" target="_blank" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2022 - 2024 BATSNUFF</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
