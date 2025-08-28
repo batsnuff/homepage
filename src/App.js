@@ -64,6 +64,8 @@ function App() {
 
       <Navigation currentLanguage={currentLanguage} />
 
+      <Spotify currentLanguage={currentLanguage} />
+
       <main className="main-content">
         <About currentLanguage={currentLanguage} />
         <Web3 currentLanguage={currentLanguage} />
@@ -71,7 +73,6 @@ function App() {
         <Music currentLanguage={currentLanguage} />
         <TopSongs currentLanguage={currentLanguage} />
         <NFT currentLanguage={currentLanguage} />
-        <Spotify currentLanguage={currentLanguage} />
       </main>
 
       <Footer currentLanguage={currentLanguage} />
