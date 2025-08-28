@@ -11,11 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/modern-style.css">
     <script defer src="js/modern-script.js"></script>
 </head>
@@ -27,11 +22,11 @@
     </div>
 
     <!-- Header Section -->
-    <header class="hero-header" data-aos="fade-down">
+    <header class="hero-header">
         <div class="header-container">
             <div class="theme-toggle">
                 <button class="theme-btn" id="themeToggle">
-                    <i class="fas fa-moon"></i>
+                    <span class="theme-icon">🌙</span>
                     <span>Dark Mode</span>
                 </button>
             </div>
@@ -45,7 +40,7 @@
                     <p class="hero-subtitle">Web3 • Gaming • Music • Development</p>
                 </div>
                 
-                <div class="hero-avatar" data-aos="zoom-in" data-aos-delay="300">
+                <div class="hero-avatar">
                     <div class="avatar-container">
                         <img src="https://pbs.twimg.com/profile_images/443374604317229056/UvHpzPuV_400x400.jpeg" alt="BATSNUFF Avatar" class="avatar-image">
                         <div class="avatar-glow"></div>
@@ -56,15 +51,15 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="main-nav" data-aos="fade-up" data-aos-delay="400">
+    <nav class="main-nav">
         <div class="nav-container">
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> O mnie</a></li>
-                <li><a href="#web3" class="nav-link"><i class="fas fa-cube"></i> Web3</a></li>
-                <li><a href="#gaming" class="nav-link"><i class="fas fa-gamepad"></i> Gaming</a></li>
-                <li><a href="#music" class="nav-link"><i class="fas fa-music"></i> Muzyka</a></li>
-                <li><a href="#nft" class="nav-link"><i class="fas fa-palette"></i> NFT</a></li>
-                <li><a href="#contacts" class="nav-link"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-icon">👤</span> O mnie</a></li>
+                <li><a href="#web3" class="nav-link"><span class="nav-icon">🔲</span> Web3</a></li>
+                <li><a href="#gaming" class="nav-link"><span class="nav-icon">🎮</span> Gaming</a></li>
+                <li><a href="#music" class="nav-link"><span class="nav-icon">🎵</span> Muzyka</a></li>
+                <li><a href="#nft" class="nav-link"><span class="nav-icon">🎨</span> NFT</a></li>
+                <li><a href="#contacts" class="nav-link"><span class="nav-icon">📧</span> Kontakt</a></li>
             </ul>
         </div>
     </nav>
@@ -72,7 +67,7 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- About Section -->
-        <section id="about" class="content-section" data-aos="fade-up">
+        <section id="about" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">O mnie</h2>
@@ -80,14 +75,14 @@
                 </div>
                 
                 <div class="about-content">
-                    <div class="about-text" data-aos="fade-right">
+                    <div class="about-text">
                         <div class="quote-card">
                             <blockquote>
-                                <i class="fas fa-quote-left quote-icon"></i>
+                                <span class="quote-icon">"</span>
                                 Jestem <span class="highlight">Miłosz</span>, ale w Web2 jak i Web3 możecie mnie znać jako <span class="highlight">BATSNUFF</span>:
                                 <br><br>
                                 Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista, uzależniony od samorozwoju, cichy zwolennik transhumanizmu.
-                                <i class="fas fa-quote-right quote-icon"></i>
+                                <span class="quote-icon">"</span>
                             </blockquote>
                         </div>
                     </div>
@@ -96,7 +91,7 @@
         </section>
 
         <!-- Web3 Section -->
-        <section id="web3" class="content-section" data-aos="fade-up">
+        <section id="web3" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">Web3 & Kryptowaluty</h2>
@@ -104,7 +99,7 @@
                 </div>
                 
                 <div class="web3-content">
-                    <div class="web3-text" data-aos="fade-right">
+                    <div class="web3-text">
                         <p>Zajmuję się kryptowalutami od około 2 lat i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku <span class="highlight">fullstack developer</span>.</p>
                         
                         <p>Robiłem wiele rzeczy związanych z programowaniem, głównie kopiuj/wklej z pomocą YouTube lub metodą "prób i błędów". Zaczęło się to już w czasach młodzieńczych (myślę, że w wieku 11/12 lat były pierwsze próby), ale zawsze znajdywałem tysiące wymówek do rozpoczęcia studiów/kursów/nauki "na własną rękę".</p>
@@ -113,15 +108,15 @@
                         
                         <div class="tech-stack">
                             <div class="tech-item">
-                                <i class="fas fa-coins"></i>
+                                <span class="tech-icon">🪙</span>
                                 <span>WAX</span>
                             </div>
                             <div class="tech-item">
-                                <i class="fas fa-bolt"></i>
+                                <span class="tech-icon">⚡</span>
                                 <span>SOL</span>
                             </div>
                             <div class="tech-item">
-                                <i class="fas fa-layer-group"></i>
+                                <span class="tech-icon">🔗</span>
                                 <span>Matic</span>
                             </div>
                         </div>
@@ -131,7 +126,7 @@
         </section>
 
         <!-- Gaming Section -->
-        <section id="gaming" class="content-section" data-aos="fade-up">
+        <section id="gaming" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">Gaming & Play2Earn</h2>
@@ -139,7 +134,7 @@
                 </div>
                 
                 <div class="gaming-content">
-                    <div class="gaming-text" data-aos="fade-right">
+                    <div class="gaming-text">
                         <p>Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności <span class="highlight">w gry typu MMORPG, wyścigowe oraz FPS.</span></p>
                         
                         <p>Jednak nie tylko tego typu gry mnie interesowały - na swoim telefonie lubię grać w <span class="highlight">gry Idle</span> oraz inne gatunki, które przyciągają moją uwagę. To właśnie dzięki graniu zyskałem nie tylko rozrywkę, ale również wiele pozytywnych doświadczeń i umiejętności, takich jak <span class="highlight">strategiczne myślenie, refleks czy koordynacja ruchowa.</span></p>
@@ -148,11 +143,11 @@
                             <h3>Używane Launchery:</h3>
                             <div class="launcher-links">
                                 <a href="https://solido.games/" target="_blank" class="launcher-btn">
-                                    <i class="fas fa-rocket"></i>
+                                    <span class="launcher-icon">🚀</span>
                                     Solido
                                 </a>
                                 <a href="https://launcher.elixir.app/" target="_blank" class="launcher-btn">
-                                    <i class="fas fa-fire"></i>
+                                    <span class="launcher-icon">🔥</span>
                                     Elixir
                                 </a>
                             </div>
@@ -181,7 +176,7 @@
         </section>
 
         <!-- Music Section -->
-        <section id="music" class="content-section" data-aos="fade-up">
+        <section id="music" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">Muzyka & Inspiracje</h2>
@@ -189,7 +184,7 @@
                 </div>
                 
                 <div class="music-content">
-                    <div class="music-text" data-aos="fade-right">
+                    <div class="music-text">
                         <p>Słucham dosłownie wszystkiego, <span class="highlight">od muzyki etnicznej z każdego zakamarka świata, popularnej, rockowej, przez hardcore, nucore po muzykę klasyczną.</span></p>
                         
                         <p>Uwielbiam muzykę lat '70-'90 i polski punk z okresu komunistycznego, muzykę elektroniczną, klubową... no i na dobrą sprawę mógłbym tak wymieniać w nieskończoność.</p>
@@ -217,14 +212,14 @@
         </section>
 
         <!-- Top Songs Section -->
-        <section id="top-songs" class="content-section" data-aos="fade-up">
+        <section id="top-songs" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">TOP 11 SONGS</h2>
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="songs-table-container" data-aos="zoom-in">
+                <div class="songs-table-container">
                     <table class="songs-table">
                         <thead>
                             <tr>
@@ -296,7 +291,7 @@
         </section>
 
         <!-- NFT Section -->
-        <section id="nft" class="content-section" data-aos="fade-up">
+        <section id="nft" class="content-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -307,7 +302,7 @@
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="nft-content" data-aos="zoom-in">
+                <div class="nft-content">
                     <div class="nft-video-container">
                         <video class="nft-video" src="images/animation nft.mp4" autoplay playsinline loop muted loading="lazy"></video>
                         <div class="video-overlay"></div>
@@ -317,7 +312,7 @@
         </section>
 
         <!-- Spotify Section -->
-        <section class="spotify-section" data-aos="fade-up">
+        <section class="spotify-section">
             <div class="section-container">
                 <div class="spotify-container">
                     <iframe src="https://open.spotify.com/embed/playlist/4F53qvpguiVUWGPeJoCkzb?utm_source=generator&theme=0" 
@@ -331,29 +326,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer" id="contacts" data-aos="fade-up">
+    <footer class="main-footer" id="contacts">
         <div class="footer-container">
             <div class="social-links">
                 <a href="https://www.instagram.com/batsnuff/" target="_blank" class="social-link" title="Instagram">
-                    <i class="fab fa-instagram"></i>
+                    📷
                 </a>
                 <a href="https://twitter.com/batsnuff/" target="_blank" class="social-link" title="Twitter">
-                    <i class="fab fa-twitter"></i>
+                    🐦
                 </a>
                 <a href="https://www.linkedin.com/in/mi%C5%82osz-szczepaniak-1708b9178/" target="_blank" class="social-link" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                    💼
                 </a>
                 <a href="https://last.fm/pl/user/batsnuff/" target="_blank" class="social-link" title="Last.fm">
-                    <i class="fas fa-music"></i>
+                    🎵
                 </a>
                 <a href="https://my.bizverse.world/BATSNUFF/" target="_blank" class="social-link" title="Bizverse">
-                    <i class="fas fa-globe"></i>
+                    🌐
                 </a>
                 <a href="https://discord.com/channels/@batsnuff#3486" target="_blank" class="social-link" title="Discord">
-                    <i class="fab fa-discord"></i>
+                    🎮
                 </a>
                 <a href="https://t.me/batsnuff/" target="_blank" class="social-link" title="Telegram">
-                    <i class="fab fa-telegram"></i>
+                    📱
                 </a>
             </div>
             
@@ -365,7 +360,7 @@
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
+        ↑
     </button>
 </body>
 </html>

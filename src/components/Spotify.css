@@ -1,0 +1,34 @@
+.spotify-section {
+  padding: 4rem 2rem;
+}
+
+.spotify-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spotify-container iframe {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.spotify-container iframe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .spotify-section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotify-container iframe {
+    height: 120px;
+  }
+}

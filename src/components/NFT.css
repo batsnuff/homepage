@@ -1,0 +1,45 @@
+.nft-content {
+  text-align: center;
+}
+
+.nft-video-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.nft-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    transparent 50%, 
+    rgba(168, 85, 247, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nft-video-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nft-video-container {
+    border-width: 1px;
+  }
+}
