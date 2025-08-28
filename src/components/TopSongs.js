@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './TopSongs.css';
+import { translations } from '../translations';
 
-const TopSongs = () => {
+const TopSongs = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -38,7 +39,7 @@ const TopSongs = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            TOP 11 SONGS
+            {translations[currentLanguage].topSongsTitle}
           </motion.h2>
           <motion.div 
             className="title-underline"
@@ -61,8 +62,8 @@ const TopSongs = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
-                <th>Utwór</th>
-                <th>Wykonawca</th>
+                <th>{translations[currentLanguage].song1.split(' - ')[1]}</th>
+                <th>{translations[currentLanguage].artist1}</th>
                 <th>Album</th>
               </motion.tr>
             </thead>

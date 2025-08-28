@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Music.css';
+import { translations } from '../translations';
 
-const Music = () => {
+const Music = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -37,7 +38,7 @@ const Music = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Muzyka & Inspiracje
+            {translations[currentLanguage].musicTitle}
           </motion.h2>
           <motion.div 
             className="title-underline"
@@ -59,23 +60,7 @@ const Music = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              Słucham dosłownie wszystkiego, <span className="highlight">od muzyki etnicznej z każdego zakamarka świata, popularnej, rockowej, przez hardcore, nucore po muzykę klasyczną.</span>
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.0, duration: 0.8 }}
-            >
-              Uwielbiam muzykę lat '70-'90 i polski punk z okresu komunistycznego, muzykę elektroniczną, klubową... no i na dobrą sprawę mógłbym tak wymieniać w nieskończoność.
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.2, duration: 0.8 }}
-            >
-              Skończyłem szkołę muzyczną i z zamiłowania jestem <span className="highlight">tekściarzem oraz kompozytorem</span> (ale wszystko trafia "do szuflady"), też <span className="highlight">śpiewam i rapuję</span>.
+              {translations[currentLanguage].musicDescription}
             </motion.p>
             
             <motion.div 

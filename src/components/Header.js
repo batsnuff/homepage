@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Header.css';
+import LanguageSelector from './LanguageSelector';
+import { translations } from '../translations';
 
-const Header = ({ scrollY }) => {
+const Header = ({ scrollY, currentLanguage, onLanguageChange }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -37,7 +39,7 @@ const Header = ({ scrollY }) => {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Web3 • Gaming • Music • Development
+              {translations[currentLanguage].subtitle}
             </motion.p>
           </motion.div>
           
@@ -70,6 +72,19 @@ const Header = ({ scrollY }) => {
             </div>
           </motion.div>
         </div>
+        
+        {/* Language Selector */}
+        <motion.div
+          className="header-language-selector"
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 1.0, duration: 0.8 }}
+        >
+          <LanguageSelector 
+            currentLanguage={currentLanguage} 
+            onLanguageChange={onLanguageChange} 
+          />
+        </motion.div>
       </div>
       
       {/* Floating elements */}

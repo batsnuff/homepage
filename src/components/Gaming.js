@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Gaming.css';
+import { translations } from '../translations';
 
-const Gaming = () => {
+const Gaming = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -44,7 +45,7 @@ const Gaming = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Gaming & Play2Earn
+            {translations[currentLanguage].gamingTitle}
           </motion.h2>
           <motion.div 
             className="title-underline"
@@ -66,15 +67,7 @@ const Gaming = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności <span className="highlight">w gry typu MMORPG, wyścigowe oraz FPS.</span>
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.0, duration: 0.8 }}
-            >
-              Jednak nie tylko tego typu gry mnie interesowały - na swoim telefonie lubię grać w <span className="highlight">gry Idle</span> oraz inne gatunki, które przyciągają moją uwagę. To właśnie dzięki graniu zyskałem nie tylko rozrywkę, ale również wiele pozytywnych doświadczeń i umiejętności, takich jak <span className="highlight">strategiczne myślenie, refleks czy koordynacja ruchowa.</span>
+              {translations[currentLanguage].gamingDescription}
             </motion.p>
             
             <motion.div 

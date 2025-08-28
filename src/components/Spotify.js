@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Spotify.css';
+import { translations } from '../translations';
 
-const Spotify = () => {
+const Spotify = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -24,7 +25,7 @@ const Spotify = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            🎵 Moja Playlista
+            🎵 {translations[currentLanguage].spotifyTitle}
           </motion.h2>
           <motion.div 
             className="title-underline"

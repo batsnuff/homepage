@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './ScrollToTop.css';
+import { translations } from '../translations';
 
-const ScrollToTop = () => {
+const ScrollToTop = ({ currentLanguage }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const ScrollToTop = () => {
           }}
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.3 }}
-          title="Scroll to top"
+          title={translations[currentLanguage].scrollToTop}
         >
           ↑
         </motion.button>

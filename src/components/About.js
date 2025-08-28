@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './About.css';
+import { translations } from '../translations';
 
-const About = () => {
+const About = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -24,7 +25,7 @@ const About = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            O mnie
+            {translations[currentLanguage].aboutTitle}
           </motion.h2>
           <motion.div 
             className="title-underline"
@@ -66,7 +67,7 @@ const About = () => {
                 </motion.span>
                 Jestem <span className="highlight">Miłosz</span>, ale w Web2 jak i Web3 możecie mnie znać jako <span className="highlight">BATSNUFF</span>:
                 <br /><br />
-                Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista, uzależniony od samorozwoju, cichy zwolennik transhumanizmu.
+                {translations[currentLanguage].aboutDescription}
                 <motion.span 
                   className="quote-icon"
                   animate={{ 

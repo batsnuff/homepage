@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './NFT.css';
+import { translations } from '../translations';
 
-const NFT = () => {
+const NFT = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -34,7 +35,7 @@ const NFT = () => {
               }}
               transition={{ duration: 0.3 }}
             >
-              <span className="gradient-text">a bit of</span> NFT SHOWCASE
+              <span className="gradient-text">a bit of</span> {translations[currentLanguage].nftTitle}
             </motion.a>
           </motion.h2>
           <motion.div 

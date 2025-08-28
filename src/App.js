@@ -14,10 +14,12 @@ import Spotify from './components/Spotify';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import LoadingScreen from './components/LoadingScreen';
+import { translations } from './translations';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [scrollY, setScrollY] = useState(0);
+  const [currentLanguage, setCurrentLanguage] = useState('pl');
 
   useEffect(() => {
     // Symulacja ładowania - zwiększony czas żeby zobaczyć pełną animację
@@ -36,7 +38,7 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <LoadingScreen />;
+    return <LoadingScreen currentLanguage={currentLanguage} />;
   }
 
   return (
@@ -58,22 +60,22 @@ function App() {
         <div className="gradient-overlay" />
       </div>
 
-      <Header scrollY={scrollY} />
+      <Header scrollY={scrollY} currentLanguage={currentLanguage} onLanguageChange={setCurrentLanguage} />
 
-      <Navigation />
+      <Navigation currentLanguage={currentLanguage} />
 
       <main className="main-content">
-        <About />
-        <Web3 />
-        <Gaming />
-        <Music />
-        <TopSongs />
-        <NFT />
-        <Spotify />
+        <About currentLanguage={currentLanguage} />
+        <Web3 currentLanguage={currentLanguage} />
+        <Gaming currentLanguage={currentLanguage} />
+        <Music currentLanguage={currentLanguage} />
+        <TopSongs currentLanguage={currentLanguage} />
+        <NFT currentLanguage={currentLanguage} />
+        <Spotify currentLanguage={currentLanguage} />
       </main>
 
-      <Footer />
-      <ScrollToTop />
+      <Footer currentLanguage={currentLanguage} />
+      <ScrollToTop currentLanguage={currentLanguage} />
     </div>
   );
 }

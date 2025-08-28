@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Web3.css';
+import { translations } from '../translations';
 
-const Web3 = () => {
+const Web3 = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -30,7 +31,7 @@ const Web3 = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Web3 & Kryptowaluty
+            {translations[currentLanguage].web3Title}
           </motion.h2>
           <motion.div 
             className="title-underline"
@@ -52,23 +53,7 @@ const Web3 = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              Zajmuję się kryptowalutami od około 2 lat i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku <span className="highlight">fullstack developer</span>.
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.0, duration: 0.8 }}
-            >
-              Robiłem wiele rzeczy związanych z programowaniem, głównie kopiuj/wklej z pomocą YouTube lub metodą "prób i błędów". Zaczęło się to już w czasach młodzieńczych (myślę, że w wieku 11/12 lat były pierwsze próby), ale zawsze znajdywałem tysiące wymówek do rozpoczęcia studiów/kursów/nauki "na własną rękę".
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.2, duration: 0.8 }}
-            >
-              Jakiś czas temu postanowiłem skupić się tylko na <span className="highlight">WAX, SOL i Matic.</span> Głównie inwestuje w waluty i NFT, z których w dużej mierze mogę korzystać w grach, ale również w surowce.
+              {translations[currentLanguage].web3Description}
             </motion.p>
             
             <motion.div 

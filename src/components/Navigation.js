@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Navigation.css';
+import { translations } from '../translations';
 
-const Navigation = () => {
+const Navigation = ({ currentLanguage }) => {
   const [activeLink, setActiveLink] = useState('');
 
   const navItems = [
-    { id: 'about', label: 'O mnie', icon: '👤' },
-    { id: 'web3', label: 'Web3', icon: '🔲' },
-    { id: 'gaming', label: 'Gaming', icon: '🎮' },
-    { id: 'music', label: 'Muzyka', icon: '🎵' },
-    { id: 'nft', label: 'NFT', icon: '🎨' },
-    { id: 'contacts', label: 'Kontakt', icon: '📧' }
+    { id: 'about', label: translations[currentLanguage].about, icon: '👤' },
+    { id: 'web3', label: translations[currentLanguage].web3, icon: '🔲' },
+    { id: 'gaming', label: translations[currentLanguage].gaming, icon: '🎮' },
+    { id: 'music', label: translations[currentLanguage].music, icon: '🎵' },
+    { id: 'nft', label: translations[currentLanguage].nft, icon: '🎨' },
+    { id: 'spotify', label: translations[currentLanguage].spotify, icon: '🎧' }
   ];
 
   const scrollToSection = (sectionId) => {

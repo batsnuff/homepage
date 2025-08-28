@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Footer.css';
+import { translations } from '../translations';
 
-const Footer = () => {
+const Footer = ({ currentLanguage }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -62,7 +63,7 @@ const Footer = () => {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.0, duration: 0.8 }}
         >
-          <p>&copy; 2022 - 2024 BATSNUFF</p>
+          <p>{translations[currentLanguage].footerText}</p>
         </motion.div>
       </motion.div>
     </footer>

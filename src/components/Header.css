@@ -89,6 +89,14 @@
   filter: blur(20px);
 }
 
+/* Language Selector in Header */
+.header-language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
 /* Floating elements */
 .floating-element {
   position: absolute;

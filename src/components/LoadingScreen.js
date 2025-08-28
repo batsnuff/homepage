@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './LoadingScreen.css';
+import { translations } from '../translations';
 
-const LoadingMiloverseText = () => {
+const LoadingMiloverseText = ({ currentLanguage }) => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'Loading Miloverse...';
+  const fullText = translations[currentLanguage].loadingMiloverse;
 
   useEffect(() => {
     let index = 0;
@@ -46,7 +47,7 @@ const LoadingMiloverseText = () => {
   );
 };
 
-const LoadingScreen = () => {
+const LoadingScreen = ({ currentLanguage }) => {
   return (
     <div className="loading-screen">
       <div className="loading-container">
@@ -73,7 +74,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          Web3 • Gaming • Music • Development
+          {translations[currentLanguage].subtitle}
         </motion.div>
         
         <motion.div
@@ -91,7 +92,7 @@ const LoadingScreen = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
         >
-          <LoadingMiloverseText />
+          <LoadingMiloverseText currentLanguage={currentLanguage} />
         </motion.div>
 
         <motion.div
