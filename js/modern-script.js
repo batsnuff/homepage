@@ -1,56 +1,61 @@
 // Modern JavaScript for Miloverse - 21st Century Interactions
 
 // Initialize AOS (Animate On Scroll)
-AOS.init({
-    duration: 800,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 100
-});
+if (typeof AOS !== 'undefined') {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 100
+    });
+}
 
 // Initialize GSAP ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 // DOM Elements
-const themeToggle = document.getElementById('themeToggle');
+const languageButtons = document.querySelectorAll('.lang-btn');
 const scrollTopBtn = document.getElementById('scrollTop');
 const sections = document.querySelectorAll('.content-section');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Theme Toggle Functionality
-let isDarkTheme = true;
-
-function toggleTheme() {
-    isDarkTheme = !isDarkTheme;
+// Language Selector Functionality
+function changeLanguage(lang, event) {
+    // Remove active class from all buttons
+    languageButtons.forEach(btn => btn.classList.remove('active'));
     
-    if (isDarkTheme) {
-        document.body.classList.remove('light-theme');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i><span>Dark Mode</span>';
-        themeToggle.style.background = 'var(--glass-bg)';
-    } else {
-        document.body.classList.add('light-theme');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i><span>Light Mode</span>';
-        themeToggle.style.background = 'var(--gradient-1)';
-    }
+    // Add active class to clicked button
+    event.target.classList.add('active');
     
-    // Add animation to theme toggle
-    themeToggle.style.transform = 'scale(0.95)';
+    // Here you can add actual language switching logic
+    // For now, just update the UI
+    console.log('Language changed to:', lang);
+    
+    // Add animation to language button
+    event.target.style.transform = 'scale(0.95)';
     setTimeout(() => {
-        themeToggle.style.transform = 'scale(1)';
+        event.target.style.transform = 'scale(1)';
     }, 150);
 }
 
 // Scroll to Top Functionality
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    if ('scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        // Fallback for older browsers
+        window.scrollTo(0, 0);
+    }
 }
 
 // Show/Hide Scroll to Top Button
 function toggleScrollTopButton() {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
         scrollTopBtn.classList.add('visible');
     } else {
         scrollTopBtn.classList.remove('visible');
@@ -65,10 +70,15 @@ function smoothScrollToSection(e) {
     
     if (targetSection) {
         const offsetTop = targetSection.offsetTop - 100;
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
+        if ('scrollBehavior' in document.documentElement.style) {
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        } else {
+            // Fallback for older browsers
+            window.scrollTo(0, offsetTop);
+        }
     }
 }
 
@@ -103,7 +113,7 @@ function createSectionObserver() {
 
 // Parallax Effect for Background
 function createParallaxEffect() {
-    const scrolled = window.pageYOffset;
+    const scrolled = window.scrollY;
     const parallaxElements = document.querySelectorAll('.floating-particles, .gradient-overlay');
     
     parallaxElements.forEach(element => {
@@ -336,14 +346,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all features after a short delay
     setTimeout(() => {
         // Event listeners
-        themeToggle.addEventListener('click', toggleTheme);
-        scrollTopBtn.addEventListener('click', scrollToTop);
+        if (languageButtons.length > 0) {
+            languageButtons.forEach(btn => {
+                btn.addEventListener('click', (event) => changeLanguage(btn.dataset.lang, event));
+            });
+        }
+        
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', scrollToTop);
+        }
+        
         window.addEventListener('scroll', toggleScrollTopButton);
         
         // Navigation smooth scrolling
-        navLinks.forEach(link => {
-            link.addEventListener('click', smoothScrollToSection);
-        });
+        if (navLinks.length > 0) {
+            navLinks.forEach(link => {
+                link.addEventListener('click', smoothScrollToSection);
+            });
+        }
         
         // Initialize animations and effects
         createSectionObserver();
@@ -354,55 +374,58 @@ document.addEventListener('DOMContentLoaded', function() {
         createCursorTrail();
         
         // GSAP animations
-        gsap.from('.hero-title', {
-            duration: 1.5,
-            y: 100,
-            opacity: 0,
-            ease: 'power3.out',
-            delay: 0.5
-        });
-        
-        gsap.from('.hero-subtitle', {
-            duration: 1.5,
-            y: 50,
-            opacity: 0,
-            ease: 'power3.out',
-            delay: 1
-        });
-        
-        gsap.from('.hero-avatar', {
-            duration: 1.5,
-            scale: 0,
-            rotation: 360,
-            ease: 'back.out(1.7)',
-            delay: 1.5
-        });
-        
-        // Stagger animation for navigation
-        gsap.from('.nav-link', {
-            duration: 0.8,
-            y: -50,
-            opacity: 0,
-            stagger: 0.1,
-            ease: 'power3.out',
-            delay: 2
-        });
-        
-        // Scroll-triggered animations
-        gsap.utils.toArray('.content-section').forEach(section => {
-            gsap.from(section, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
-                    toggleActions: 'play none none reverse'
-                },
+        if (typeof gsap !== 'undefined') {
+            gsap.from('.hero-title', {
+                duration: 1.5,
                 y: 100,
                 opacity: 0,
-                duration: 1,
-                ease: 'power3.out'
+                ease: 'power3.out',
+                delay: 0.5
             });
-        });
+            
+            gsap.from('.hero-subtitle', {
+                duration: 1.5,
+                y: 50,
+                opacity: 0,
+                ease: 'power3.out',
+                delay: 1
+            });
+            
+            gsap.from('.hero-avatar', {
+                duration: 1.5,
+                scale: 0,
+                rotation: 360,
+                ease: 'back.out(1.7)',
+                delay: 1.5
+            });
+            
+            // Stagger animation for navigation
+            gsap.from('.nav-link', {
+                duration: 0.8,
+                y: -50,
+                opacity: 0,
+                stagger: 0.1,
+                ease: 'power3.out',
+                delay: 2
+            });
+            
+            // Scroll-triggered animations
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 80%',
+                        end: 'bottom 20%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    y: 100,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power3.out'
+                });
+            });
+        }
         
     }, 1500);
 });

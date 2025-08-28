@@ -13,6 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/modern-style.css">
     <script defer src="js/modern-script.js"></script>
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GSAP Library for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!-- Animated Background -->
@@ -24,11 +30,9 @@
     <!-- Header Section -->
     <header class="hero-header">
         <div class="header-container">
-            <div class="theme-toggle">
-                <button class="theme-btn" id="themeToggle">
-                    <span class="theme-icon">🌙</span>
-                    <span>Dark Mode</span>
-                </button>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="pl">🇵🇱 PL</button>
+                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
             </div>
             
             <div class="hero-content">
@@ -63,6 +67,23 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Spotify Section - moved to top -->
+    <section class="spotify-section">
+        <div class="spotify-content">
+            <div class="section-header">
+                <h2 class="section-title">🎵 Spotify Playlist</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="spotify-container">
+                <iframe src="https://open.spotify.com/embed/playlist/4F53qvpguiVUWGPeJoCkzb?utm_source=generator&theme=0" 
+                        width="100%" height="152" frameBorder="0" 
+                        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -307,19 +328,6 @@
                         <video class="nft-video" src="images/animation nft.mp4" autoplay playsinline loop muted loading="lazy"></video>
                         <div class="video-overlay"></div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Spotify Section -->
-        <section class="spotify-section">
-            <div class="section-container">
-                <div class="spotify-container">
-                    <iframe src="https://open.spotify.com/embed/playlist/4F53qvpguiVUWGPeJoCkzb?utm_source=generator&theme=0" 
-                            width="100%" height="152" frameBorder="0" 
-                            allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy">
-                    </iframe>
                 </div>
             </div>
         </section>
