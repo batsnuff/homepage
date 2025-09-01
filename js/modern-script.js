@@ -29,15 +29,169 @@ function changeLanguage(lang, event) {
     // Add active class to clicked button
     event.target.classList.add('active');
     
-    // Here you can add actual language switching logic
-    // For now, just update the UI
-    console.log('Language changed to:', lang);
+    // Load translations and apply them
+    loadTranslations(lang);
     
     // Add animation to language button
     event.target.style.transform = 'scale(0.95)';
     setTimeout(() => {
         event.target.style.transform = 'scale(1)';
     }, 150);
+}
+
+// Load and apply translations
+async function loadTranslations(lang) {
+    try {
+        // Import translations dynamically
+        const { translations } = await import('../src/translations.js');
+        
+        if (translations && translations[lang]) {
+            applyTranslations(translations[lang]);
+        }
+    } catch (error) {
+        console.error('Error loading translations:', error);
+        // Fallback: load translations from a simpler approach
+        loadTranslationsFallback(lang);
+    }
+}
+
+// Fallback method for loading translations
+function loadTranslationsFallback(lang) {
+    // Define translations inline as fallback
+    const translations = {
+        pl: {
+            welcomeIn: "WELCOME IN",
+            subtitle: "Web3 • Gaming • Muzyka • Development",
+            about: "O mnie",
+            gaming: "Gaming",
+            music: "Muzyka",
+            contacts: "Kontakt",
+            spotifyPlaylist: "Spotify Playlist",
+            aboutTitle: "O mnie",
+            aboutIntro: "Jestem",
+            aboutIntro2: "ale w Web2 jak i Web3 możecie mnie znać jako",
+            aboutDescription: "Entuzjasta Web3 z aspiracjami na zostanie full stack developer, odwieczny gracz, miłośnik książek (głównie popularnonaukowych i fantasy), multiinstrumentalista, uzależniony od samorozwoju, cichy zwolennik transhumanizmu.",
+            web3Title: "Web3 & Kryptowaluty",
+            web3Description1: "Zajmuję się kryptowalutami od dość długiego czasu i oszalałem na punkcie Web3, oraz mnóstwa możliwości, jakie oferuje. Chcę być częścią rozwoju tego półświatka co nakłoniło mnie aby w końcu rozpocząć naukę w kierunku",
+            web3Description2: "Robiłem wiele rzeczy związanych z programowaniem, głównie kopiuj/wklej z pomocą YouTube lub metodą \"prób i błędów\". Zaczęło się to już w czasach młodzieńczych (myślę, że w wieku 11/12 lat były pierwsze próby), ale zawsze znajdywałem tysiące wymówek do rozpoczęcia studiów/kursów/nauki \"na własną rękę\".",
+            web3Description3: "Jakiś czas temu postanowiłem skupić się tylko na",
+            web3Description4: "Głównie inwestuje w waluty i NFT, z których w dużej mierze mogę korzystać w grach, ale również w surowce.",
+            gamingTitle: "Gaming & Play2Earn",
+            gamingDescription1: "Od najmłodszych lat jestem zapalonym graczem i zawsze uwielbiałem spędzać czas na grach komputerowych. Przez wiele lat grałem na różnych konsolach PlayStation oraz na komputerze, w szczególności",
+            gamingDescription2: "Jednak nie tylko tego typu gry mnie interesowały - na swoim telefonie lubię grać w",
+            gamingDescription3: "oraz inne gatunki, które przyciągają moją uwagę. To właśnie dzięki graniu zyskałem nie tylko rozrywkę, ale również wiele pozytywnych doświadczeń i umiejętności, takich jak",
+            usedLaunchers: "Używane Launchery:",
+            solido: "Solido",
+            elixir: "Elixir",
+            favoriteBlockchainGames: "Ulubione Gry Blockchain:",
+            musicTitle: "Muzyka & Inspiracje",
+            musicDescription1: "Słucham dosłownie wszystkiego,",
+            musicDescription2: "Uwielbiam muzykę lat '70-'90 i polski punk z okresu komunistycznego, muzykę elektroniczną, klubową... no i na dobrą sprawę mógłbym tak wymieniać w nieskończoność.",
+            musicDescription3: "Skończyłem szkołę muzyczną i z zamiłowania jestem",
+            musicDescription4: "(ale wszystko trafia \"do szuflady\"), też",
+            currentlyListening: "Obecnie na słuchawkach:",
+            topSongsTitle: "TOP 11 SONGS",
+            song: "Utwór",
+            artist: "Wykonawca",
+            album: "Album"
+        },
+        en: {
+            welcomeIn: "WELCOME IN",
+            subtitle: "Web3 • Gaming • Music • Development",
+            about: "About",
+            gaming: "Gaming",
+            music: "Music",
+            contacts: "Contact",
+            spotifyPlaylist: "Spotify Playlist",
+            aboutTitle: "About Me",
+            aboutIntro: "I am",
+            aboutIntro2: "but in Web2 as well as Web3 you may know me as",
+            aboutDescription: "Web3 enthusiast with aspirations to become a full stack developer, lifelong gamer, book lover (mainly popular science and fantasy), multi-instrumentalist, addicted to self-development, quiet supporter of transhumanism.",
+            web3Title: "Web3 & Cryptocurrencies",
+            web3Description1: "I've been involved with cryptocurrencies for quite a long time and I'm crazy about Web3 and the many opportunities it offers. I want to be part of the development of this underworld which prompted me to finally start learning towards",
+            web3Description2: "I've done many things related to programming, mainly copy/paste with the help of YouTube or the trial and error method. It started already in my youth (I think at the age of 11/12 there were first attempts), but I always found thousands of excuses to start studies/courses/learning \"on my own\".",
+            web3Description3: "Some time ago I decided to focus only on",
+            web3Description4: "I mainly invest in currencies and NFTs, which I can largely use in games, but also in raw materials.",
+            gamingTitle: "Gaming & Play2Earn",
+            gamingDescription1: "From an early age I've been a passionate gamer and I've always loved spending time on computer games. For many years I played on various PlayStation consoles and on computer, especially",
+            gamingDescription2: "However, not only this type of games interested me - on my phone I like to play",
+            gamingDescription3: "and other genres that catch my attention. It was through gaming that I gained not only entertainment, but also many positive experiences and skills, such as",
+            usedLaunchers: "Used Launchers:",
+            solido: "Solido",
+            elixir: "Elixir",
+            favoriteBlockchainGames: "Favorite Blockchain Games:",
+            musicTitle: "Music & Inspirations",
+            musicDescription1: "I listen to literally everything,",
+            musicDescription2: "I love music from the '70s-'90s and Polish punk from the communist period, electronic music, club music... and actually I could go on listing forever.",
+            musicDescription3: "I graduated from music school and by passion I am a",
+            musicDescription4: "(but everything goes \"to the drawer\"), I also",
+            currentlyListening: "Currently on headphones:",
+            topSongsTitle: "TOP 11 SONGS",
+            song: "Song",
+            artist: "Artist",
+            album: "Album"
+        },
+        nl: {
+            welcomeIn: "WELCOME IN",
+            subtitle: "Web3 • Gaming • Muziek • Development",
+            about: "Over mij",
+            gaming: "Gaming",
+            music: "Muziek",
+            contacts: "Contact",
+            spotifyPlaylist: "Spotify Afspeellijst",
+            aboutTitle: "Over mij",
+            aboutIntro: "Ik ben",
+            aboutIntro2: "maar in Web2 zowel als Web3 kun je me kennen als",
+            aboutDescription: "Web3-enthousiast met aspiraties om full stack developer te worden, levenslange gamer, boekenliefhebber (voornamelijk populairwetenschappelijk en fantasy), multi-instrumentalist, verslaafd aan zelfontwikkeling, stille voorstander van transhumanisme.",
+            web3Title: "Web3 & Cryptocurrencies",
+            web3Description1: "Ik ben al geruime tijd bezig met cryptocurrencies en ik ben gek op Web3 en de vele mogelijkheden die het biedt. Ik wil deel uitmaken van de ontwikkeling van deze onderwereld wat me ertoe bracht om eindelijk te beginnen met leren in de richting van",
+            web3Description2: "Ik heb veel dingen gedaan die verband houden met programmeren, voornamelijk kopiëren/plakken met behulp van YouTube of de trial and error methode. Het begon al in mijn jeugd (ik denk op de leeftijd van 11/12 jaar waren er eerste pogingen), maar ik vond altijd duizenden excuses om te beginnen met studies/cursussen/leren \"op eigen houtje\".",
+            web3Description3: "Enige tijd geleden besloot ik me alleen te concentreren op",
+            web3Description4: "Ik investeer voornamelijk in valuta's en NFT's, die ik grotendeels kan gebruiken in games, maar ook in grondstoffen.",
+            gamingTitle: "Gaming & Play2Earn",
+            gamingDescription1: "Van jongs af aan ben ik een gepassioneerde gamer en ik heb altijd graag tijd doorgebracht met computerspellen. Jarenlang speelde ik op verschillende PlayStation-consoles en op computer, vooral",
+            gamingDescription2: "Echter, niet alleen dit type spellen interesseerde me - op mijn telefoon speel ik graag",
+            gamingDescription3: "en andere genres die mijn aandacht trekken. Het was door gamen dat ik niet alleen vermaak kreeg, maar ook veel positieve ervaringen en vaardigheden, zoals",
+            usedLaunchers: "Gebruikte Launchers:",
+            solido: "Solido",
+            elixir: "Elixir",
+            favoriteBlockchainGames: "Favoriete Blockchain Spellen:",
+            musicTitle: "Muziek & Inspiraties",
+            musicDescription1: "Ik luister naar letterlijk alles,",
+            musicDescription2: "Ik hou van muziek uit de jaren '70-'90 en Poolse punk uit de communistische periode, elektronische muziek, clubmuziek... en eigenlijk zou ik zo oneindig door kunnen gaan met opsommen.",
+            musicDescription3: "Ik ben afgestudeerd van de muziekschool en uit passie ben ik een",
+            musicDescription4: "(maar alles gaat \"naar de la\"), ik",
+            currentlyListening: "Momenteel op koptelefoon:",
+            topSongsTitle: "TOP 11 LIEDJES",
+            song: "Liedje",
+            artist: "Artiest",
+            album: "Album"
+        }
+    };
+    
+    if (translations[lang]) {
+        applyTranslations(translations[lang]);
+    }
+}
+
+// Apply translations to the DOM
+function applyTranslations(translations) {
+    const elements = document.querySelectorAll('[data-translate]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[key]) {
+            element.textContent = translations[key];
+        }
+    });
+    
+    // Update page title and meta description if available
+    if (translations.title) {
+        document.title = translations.title;
+    }
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = translations.lang || 'pl';
 }
 
 // Scroll to Top Functionality
@@ -111,16 +265,10 @@ function createSectionObserver() {
     });
 }
 
-// Parallax Effect for Background
+// Parallax Effect for Background - Disabled to fix visual issues
 function createParallaxEffect() {
-    const scrolled = window.scrollY;
-    const parallaxElements = document.querySelectorAll('.floating-particles, .gradient-overlay');
-    
-    parallaxElements.forEach(element => {
-        const speed = element.classList.contains('floating-particles') ? 0.5 : 0.3;
-        const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-    });
+    // Disabled parallax effect to prevent visual glitches
+    return;
 }
 
 // Mouse Movement Effect
@@ -166,52 +314,16 @@ function createTypingEffect() {
     setTimeout(typeWriter, 1000);
 }
 
-// Particle Animation
+// Particle Animation - Disabled to fix visual issues
 function createParticleAnimation() {
-    const particlesContainer = document.querySelector('.floating-particles');
-    if (!particlesContainer) return;
-    
-    // Create floating particles
-    for (let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: ${Math.random() * 4 + 2}px;
-            height: ${Math.random() * 4 + 2}px;
-            background: var(--primary-purple);
-            border-radius: 50%;
-            opacity: ${Math.random() * 0.5 + 0.2};
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation: float-particle ${Math.random() * 10 + 10}s infinite linear;
-        `;
-        particlesContainer.appendChild(particle);
-    }
+    // Disabled particle animation to prevent visual glitches
+    return;
 }
 
-// Add CSS for particles
+// Add CSS for particles - Disabled to fix visual issues
 function addParticleCSS() {
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float-particle {
-            0% {
-                transform: translateY(0px) translateX(0px);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+    // Disabled particle CSS to prevent visual glitches
+    return;
 }
 
 // Hover Effects for Interactive Elements
@@ -336,9 +448,9 @@ function createCursorTrail() {
 
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Add CSS for particles and loader
-    addParticleCSS();
-    addLoaderCSS();
+            // Add CSS for particles and loader
+        // addParticleCSS(); // Disabled to fix visual glitches
+        addLoaderCSS();
     
     // Create loading animation
     createLoadingAnimation();
@@ -350,6 +462,9 @@ document.addEventListener('DOMContentLoaded', function() {
             languageButtons.forEach(btn => {
                 btn.addEventListener('click', (event) => changeLanguage(btn.dataset.lang, event));
             });
+            
+            // Initialize with Polish language
+            loadTranslationsFallback('pl');
         }
         
         if (scrollTopBtn) {
@@ -369,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createSectionObserver();
         createMouseMovementEffect();
         createTypingEffect();
-        createParticleAnimation();
+        // createParticleAnimation(); // Disabled to fix visual glitches
         addHoverEffects();
         createCursorTrail();
         
@@ -444,8 +559,8 @@ function throttle(func, limit) {
     };
 }
 
-// Apply throttling to scroll events
-window.addEventListener('scroll', throttle(createParallaxEffect, 16));
+// Apply throttling to scroll events - Disabled to fix visual glitches
+// window.addEventListener('scroll', throttle(createParallaxEffect, 16));
 
 // Add some extra interactive effects
 document.addEventListener('DOMContentLoaded', function() {
