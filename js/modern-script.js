@@ -411,39 +411,10 @@ function addLoaderCSS() {
     document.head.appendChild(style);
 }
 
-// Cursor Trail Effect
+// Cursor Trail Effect - Disabled to improve mobile experience
 function createCursorTrail() {
-    const cursorTrail = document.createElement('div');
-    cursorTrail.className = 'cursor-trail';
-    cursorTrail.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: var(--primary-purple);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        opacity: 0.6;
-        transition: transform 0.1s ease;
-    `;
-    
-    document.body.appendChild(cursorTrail);
-    
-    let mouseX = 0;
-    let mouseY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-    
-    function updateCursorTrail() {
-        cursorTrail.style.left = mouseX - 10 + 'px';
-        cursorTrail.style.top = mouseY - 10 + 'px';
-        requestAnimationFrame(updateCursorTrail);
-    }
-    
-    updateCursorTrail();
+    // Disabled cursor trail effect to improve mobile readability
+    return;
 }
 
 // Initialize all functions when DOM is loaded
@@ -486,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createTypingEffect();
         // createParticleAnimation(); // Disabled to fix visual glitches
         addHoverEffects();
-        createCursorTrail();
+        // createCursorTrail(); // Disabled to improve mobile experience
         
         // GSAP animations
         if (typeof gsap !== 'undefined') {
